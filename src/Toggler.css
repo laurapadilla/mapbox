@@ -1,0 +1,7 @@
+div.toggler {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  background-color: aqua;
+  z-index: 1;
+}
