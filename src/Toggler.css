@@ -2,6 +2,26 @@ div.toggler {
   position: fixed;
   bottom: 40px;
   left: 40px;
-  background-color: aqua;
   z-index: 1;
+}
+
+div.toggler button {
+  background-color: #fff;
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  padding: 10px;
+  margin: 0 1px 0 0;
+  color: #3e3e3e;
+  outline: none;
+  cursor: pointer;
+}
+
+div.toggler button:hover {
+  background-color: rgb(235, 232, 232);
+}
+
+div.toggler button.selected {
+  background-color: dodgerblue;
+  color: white;
 }

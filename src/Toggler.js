@@ -25,17 +25,20 @@ class Toggler extends Component {
     ];
 
     const buttons = styles.map((style) => {
+      let className = "";
+
+      if (style.url === this.props.app.state.style) {
+        className = "selected";
+      }
+
       return (
-        <button onClick={() => this.setLayer(style.url)}>{style.name}</button>
+        <button className={className} onClick={() => this.setLayer(style.url)}>
+          {style.name}
+        </button>
       );
     });
 
-    return (
-      <div className="toggler">
-        {buttons}
-        {this.props.app.state.style}
-      </div>
-    );
+    return <div className="toggler">{buttons}</div>;
   }
 }
 
