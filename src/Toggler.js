@@ -24,7 +24,7 @@ class Toggler extends Component {
       },
     ];
 
-    const buttons = styles.map((style) => {
+    const buttons = styles.map((style, index) => {
       let className = "";
 
       if (style.url === this.props.app.state.style) {
@@ -32,7 +32,11 @@ class Toggler extends Component {
       }
 
       return (
-        <button className={className} onClick={() => this.setLayer(style.url)}>
+        <button
+          className={className}
+          key={index}
+          onClick={() => this.setLayer(style.url)}
+        >
           {style.name}
         </button>
       );

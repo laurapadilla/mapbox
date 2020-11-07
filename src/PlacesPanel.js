@@ -8,8 +8,10 @@ class PlacesPanel extends Component {
 
     let placeItems = <div className="no-results">Nothing added yet</div>;
     if (places.length > 0) {
-      placeItems = places.map((place) => {
-        return <PlaceItem place={place}></PlaceItem>;
+      placeItems = places.map((place, index) => {
+        return (
+          <PlaceItem place={place} app={this.props.app} key={index}></PlaceItem>
+        );
       });
     }
 
